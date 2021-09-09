@@ -45,10 +45,10 @@ else{
             $texto .= $fila['cantidad'];
             $texto .= "</td>";
             $texto .= "<td>";
-            $texto .= $egresos[$fila['hora']];
+            $texto .= isset($egresos[$fila['hora']]) ? $egresos[$fila['hora']] : '0';
             $texto .= "</td>";
             $texto .= "<td>";
-            $texto .= $fila['cantidad']-$egresos[$fila['hora']];
+            $texto .= $fila['cantidad']-(isset($egresos[$fila['hora']]) ? $egresos[$fila['hora']] : '0');
             $texto .= "</td>";
             $texto .= "<td>";
             $texto .= $fila['hora'];
