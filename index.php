@@ -10,9 +10,7 @@
 <?php
 session_start();
 include 'conex.php';
-if (!isset($_SESSION['contador'])) {
-    $_SESSION['contador'] = 0;
-}
+
 $sql="SELECT(SELECT COUNT(id) as cantidad FROM `contador` WHERE tipo='ingreso' AND DATE(fecha) = DATE(NOW())) -
 (SELECT COUNT(id) as cantidad FROM `contador` WHERE tipo='egreso' AND DATE(fecha) = DATE(NOW())) as resultado";
 $resultado=mysqli_query($con,$sql);
