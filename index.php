@@ -20,13 +20,13 @@ $fila = mysqli_fetch_assoc($resultado);
 
 <body>
     <h1 style="font-size:140px; color:blue;"><?php print $fila['resultado'] ?></h1>
-    <div style="width: 50%;">
+    <div>
         <form action="suma.php" method="GET">
             <input type="hidden" name="local" value="prueba">
             <input style="font-size: 80px;" type="submit" value="+">
         </form>
     </div>
-    <div style="width: 50%;">
+    <div>
         <form action="resta.php" method="GET">
             <input type="hidden" name="local" value="prueba">
             <input style="font-size: 90px;" type="submit" value="-">
